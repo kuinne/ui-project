@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    // 语言和环境
+    "target": "ESNext", //使用最新的 ECMAScript 特性
+    "lib": ["ESNext", "DOM"], // 明确依赖库的类型
+    "jsx": "preserve", // 保留 JSX 语法
+    "jsxImportSource": "vue", // 指定 JSX 的导入源为 Vue
+    "moduleDetection": "force", // 所有文件都被视为模块，无论是否包含 import/export。确保每个文件拥有独立作用域，避免全局变量污染。
+
+    // 模块
+    "module": "ESNext", // 使用最新的 ES 模块系统
+    "moduleResolution": "bundler", // 决定编译器如何查找模块
+    "allowImportingTsExtensions": true, // 允许导入带 .ts 扩展的文件
+    "rootDir": "src", // 控制输出结构，将源码的根目录(src) 映射到输出目录 (dist)的结构关系
+    "resolveJsonModule": true, // 允许导入 JSON 文件
+
+    // 类型检查
+    "strict": true, // 启用所有严格类型检查选项
+
+    // 兼容性约束
+    "esModuleInterop": true, // 解决 import 语法与 CommonJS 模块不兼容的问题。
+    "forceConsistentCasingInFileNames": true, // 强制文件名大小写一致
+    "verbatimModuleSyntax": true, // 保留模块导入/导出语句的原始语法，确保编译后的 JavaScript 代码中的模块语法与源代码完全一致
+    "isolatedModules": true, // 确保每个文件可独立编译(vite 需要)
+
+    // 完整性
+    "skipLibCheck": true, // 跳过声明文件的类型检查，提高编译速度
+
+    // 输出
+    "noEmit": true, // 不生成输出文件
+    "declaration": true, // 生成声明文件
+    "declarationDir": "dist", // 声明文件输出目录
+    "outDir": "dist" // 输出目录
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+}
