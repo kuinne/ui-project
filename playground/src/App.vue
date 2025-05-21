@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { Button } from "@kuinne/ui-components";
+import { KButton } from "@kuinne/ui-components";
+// import { Button } from "@kuinne/ui";
 import { formatDate } from "@kuinne/ui-utils";
 </script>
 
 <template>
   <div>
-    <Button size="large">{{ formatDate(new Date(), "YYYY年MM月DD日") }}</Button>
+    <k-button size="large">{{
+      formatDate(new Date(), "YYYY年MM月DD日")
+    }}</k-button>
   </div>
 </template>
 

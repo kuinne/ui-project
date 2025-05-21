@@ -9,15 +9,17 @@
     :disabled="disabled"
     @click="handleClick"
   >
-    <!-- <slot></slot> -->
-    313
+    <slot></slot>
   </button>
 </template>
 
 <script lang="ts" setup>
 import type { Props } from "./types";
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  type: "default",
+  size: "medium",
+});
 const emit = defineEmits(["click"]);
 
 const handleClick = (event: MouseEvent) => {

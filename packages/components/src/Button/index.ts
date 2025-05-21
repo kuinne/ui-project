@@ -1,6 +1,6 @@
-import _Button from "./Button.vue";
+import Button from "./Button.vue";
 
 export type { Props } from "./types";
 
-export const Button = _Button;
-export default Button;
+export const KButton = Button;
+export default KButton;

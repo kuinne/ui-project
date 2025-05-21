@@ -13,9 +13,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/markdown-it-container": "^2.0.10",
     "vitepress": "^1.6.3"
   },
   "dependencies": {
-    "@kuinne/ui-components": "workspace:*"
+    "@kuinne/ui-components": "workspace:*",
+    "@kuinne/ui-utils": "workspace:*",
+    "markdown-it-container": "^4.0.0"
   }
 }

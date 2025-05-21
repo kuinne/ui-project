@@ -1,4 +1,6 @@
 import { defineConfig } from "vitepress";
+import { createDemoContainer } from "./plugins/demo";
+import mdContainer from "markdown-it-container";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -35,5 +37,8 @@ export default defineConfig({
       detailsLabel: "详细信息",
     },
     lineNumbers: true,
+    config: (md) => {
+      md.use(mdContainer, "demo", createDemoContainer(md));
+    },
   },
 });

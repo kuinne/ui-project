@@ -8,8 +8,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "ui-components",
-      fileName: "ui-components",
+      name: "kuinne-ui",
+      fileName: "kuinne-ui",
+      formats: ["es", "cjs", "umd"],
     },
     rollupOptions: {
       external: ["vue"],
@@ -25,8 +26,7 @@ export default defineConfig({
     dts({
       include: ["src/**/*.ts", "src/**/*.vue"],
       outDir: "dist",
-      // tsconfigPath: "./tsconfig.app.json",
-      tsconfigPath: "./tsconfig.simple.json",
+      tsconfigPath: "./tsconfig.app.json",
       compilerOptions: {
         declaration: true, // 生成 .d.ts 类型声明文件
         emitDeclarationOnly: true, // 只输出类型声明文件，不输出编译后的 JS 文件

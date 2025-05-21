@@ -17,7 +17,8 @@
   },
   "dependencies": {
     "@kuinne/ui-components": "workspace:*",
-    "@kuinne/ui-utils": "workspace:*"
+    "@kuinne/ui-utils": "workspace:*",
+    "@kuinne/ui": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",

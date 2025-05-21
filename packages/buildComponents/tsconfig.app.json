@@ -32,6 +32,6 @@
     "declarationDir": "dist", // 声明文件输出目录
     "outDir": "dist" // 输出目录
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
